@@ -1,0 +1,51 @@
+todo_text,priority
+# TODO @ArthurZucker remove this once docker is easier to build,2
+# TODO: Give warnings.,3
+# TODO: not hardcoded,4
+"# TODO use  decode_one_token(model, input_id.clone(), cache_position) for verification",2
+# TODO: move to self.save_hyperparameters(),3
+"num_devices = max(1, self.hparams.gpus)  # TODO: consider num_tpu_cores",1
+# TODO: remove with PyTorch 1.6 since pl uses native amp,1
+# TODO(@stas00): add whatever metadata to metrics,2
+# TODO clean up all this to leverage built-in features of tokenizers,2
+"# TODO (joao): remove the `if` below, only used for BC",2
+"self.register_buffer(""inv_freq"", inv_freq, persistent=False)  # TODO joao: may break with compilation",1
+"# TODO (joao): remove in v4.46 (RoPE is computed in the model, not in the decoder layers)",2
+# TODO: Should be removed once Flash Attention for RoCm is bumped to 2.1.,2
+"# TODO: These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim]. We would need to refactor the KV cache",3
+"# TODO: Improve this warning with e.g. `model.config.attn_implementation = ""manual""` once this is implemented.",4
+"# TODO: Improve this warning with e.g. `model.config._attn_implementation = ""manual""` once implemented.",4
+"reduce_labels=args.do_reduce_labels,  # TODO: remove when mask2former support `do_reduce_labels`",1
+# TODO support datasets from local folders,2
+# TODO (Sanchit): deprecate these arguments in v4.41,2
+# TODO fix mask_token_id setup when configurations will be synchronized between models and tokenizers,1
+yield buffer_per_group[group_id]  # TODO,4
+# TODO in original code this is written as number of actual batches seen,3
+"# TODO: weights should be initialized in pjitted fun, this won't work for REALLY large modelswhen loading from pre-trained model we need to make sure the vocab is divisible by num_partitions",1
+"# TODO: optax returns different state for different optimizers, how can we handle this generically ?",3
+# TODO: allow loading weights on CPU in pre-trained model,2
+# TODO: try to use TrainState instead of passing params and opt_state individually,2
+wiki40b_gpu_index_flat.add(wiki40b_passage_reps)  # TODO fix for larger GPU,1
+# TODO: Add ACT2FN reference to change activation function,2
+# TODO(kchoro): Get rid of the constant below.,3
+# TODO fix this comment (SUMANTH),4
+# TODO: Check the layer-norm consistency of this with trained discriminator (Sumanth),2
+# TODO why we need to do this assignment and not just using unpert_past? (Sumanth),2
+# TODO: turn on args.do_predict when PL bug fixed.,1
+"""fp16"": False,  # TODO(SS): set this to CUDA_AVAILABLE if ci installs apex or start using native amp",1
+# TODO: understand why this breaks,1
+# TODO(SS): make a wandb summary metric for this,2
+"# TODO(elgeish) return a pipeline (e.g., from jiwer) instead? Or rely on branch predictor as is",4
+def prepare_example(example):  # TODO(elgeish) make use of multiprocessing?,3
+## TODO,4
+# TODO: observation naming could allow for different names of same type,4
+# TODO This method does not support batching yet as we are mainly focused on inference.,3
+# TODO(PVP): currently only single GPU is supported,2
+# TODO: Currently only single GPU is supported,2
+"info[""num_gpus""] = 1  # TODO(PVP) Currently only single GPU is supported",2
+# TODO(PVP): See if we can add more information about TPU,4
+# TODO: deprecate this function in favor of `cache_position`,1
+# TODO (joao): remove `=None` in non-optional arguments in v4.46. Remove from `OBJECTS_TO_IGNORE` as well.,1
+"# TODO(gante, sanchit-gandhi): move following functionality into `.generate`",2
+# TODO(gante): Remove this.,2
+# TODO: Find some kind of fallback if there is no _CHECKPOINT_FOR_DOC in any of the modeling file.,1

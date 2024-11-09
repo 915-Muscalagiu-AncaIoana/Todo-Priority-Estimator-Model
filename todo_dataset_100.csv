@@ -1,0 +1,101 @@
+todo_text,priority
+# TODO @ArthurZucker remove this once docker is easier to build,2
+# TODO: Give warnings.,3
+# TODO: not hardcoded,4
+"# TODO use  decode_one_token(model, input_id.clone(), cache_position) for verification",2
+# TODO: move to self.save_hyperparameters(),3
+"num_devices = max(1, self.hparams.gpus)  # TODO: consider num_tpu_cores",1
+# TODO: remove with PyTorch 1.6 since pl uses native amp,1
+# TODO(@stas00): add whatever metadata to metrics,2
+# TODO clean up all this to leverage built-in features of tokenizers,2
+"# TODO (joao): remove the `if` below, only used for BC",2
+"self.register_buffer(""inv_freq"", inv_freq, persistent=False)  # TODO joao: may break with compilation",1
+"# TODO (joao): remove in v4.46 (RoPE is computed in the model, not in the decoder layers)",2
+# TODO: Should be removed once Flash Attention for RoCm is bumped to 2.1.,2
+"# TODO: These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim]. We would need to refactor the KV cache",3
+"# TODO: Improve this warning with e.g. `model.config.attn_implementation = ""manual""` once this is implemented.",4
+"# TODO: Improve this warning with e.g. `model.config._attn_implementation = ""manual""` once implemented.",4
+"reduce_labels=args.do_reduce_labels,  # TODO: remove when mask2former support `do_reduce_labels`",1
+# TODO support datasets from local folders,2
+# TODO (Sanchit): deprecate these arguments in v4.41,2
+# TODO fix mask_token_id setup when configurations will be synchronized between models and tokenizers,1
+yield buffer_per_group[group_id]  # TODO,4
+# TODO in original code this is written as number of actual batches seen,3
+"# TODO: weights should be initialized in pjitted fun, this won't work for REALLY large modelswhen loading from pre-trained model we need to make sure the vocab is divisible by num_partitions",1
+"# TODO: optax returns different state for different optimizers, how can we handle this generically ?",3
+# TODO: allow loading weights on CPU in pre-trained model,2
+# TODO: try to use TrainState instead of passing params and opt_state individually,2
+wiki40b_gpu_index_flat.add(wiki40b_passage_reps)  # TODO fix for larger GPU,1
+# TODO: Add ACT2FN reference to change activation function,2
+# TODO(kchoro): Get rid of the constant below.,3
+# TODO fix this comment (SUMANTH),4
+# TODO: Check the layer-norm consistency of this with trained discriminator (Sumanth),2
+# TODO why we need to do this assignment and not just using unpert_past? (Sumanth),2
+# TODO: turn on args.do_predict when PL bug fixed.,1
+"""fp16"": False,  # TODO(SS): set this to CUDA_AVAILABLE if ci installs apex or start using native amp",1
+# TODO: understand why this breaks,1
+# TODO(SS): make a wandb summary metric for this,2
+"# TODO(elgeish) return a pipeline (e.g., from jiwer) instead? Or rely on branch predictor as is",4
+def prepare_example(example):  # TODO(elgeish) make use of multiprocessing?,3
+## TODO,4
+# TODO: observation naming could allow for different names of same type,4
+# TODO This method does not support batching yet as we are mainly focused on inference.,3
+# TODO(PVP): currently only single GPU is supported,2
+# TODO: Currently only single GPU is supported,2
+"info[""num_gpus""] = 1  # TODO(PVP) Currently only single GPU is supported",2
+# TODO(PVP): See if we can add more information about TPU,4
+# TODO: deprecate this function in favor of `cache_position`,1
+# TODO (joao): remove `=None` in non-optional arguments in v4.46. Remove from `OBJECTS_TO_IGNORE` as well.,1
+"# TODO(gante, sanchit-gandhi): move following functionality into `.generate`",2
+# TODO(gante): Remove this.,2
+# TODO: Find some kind of fallback if there is no _CHECKPOINT_FOR_DOC in any of the modeling file.,1
+# TODO (joao): delete file in v4.47,2
+# Tokenizer arguments TODO: eventually tokenizer and models should share the same config,2
+# TODO (joao): this should be an exception if the user has modified the loaded config. See #33886,3
+"# TODO: randomness could apply a random seed, ex. rng = random.Random(random_seed)",2
+encoded_dict = tokenizer.encode_plus(  # TODO(thom) update this logic,2
+"# TODO joao: find out a way of not depending on external fields (e.g. `assistant_model`), then make this a",3
+# TODO(Patrick): Make sure that official models have max_initial_timestamp_index set to 50,3
+# TODO (Joao): this function might trigger XLA retracing as `cur_len` increases. Fix it if it becomes,1
+# TODO (joao): enable XLA on this logits processor. See discussion and attempts in,2
+# TODO (Joao): fix cache format or find programatic way to detect cache index,1
+# TODO (joao): remove the equivalent classes and typing shortcuts below in v5,1
+# 8. Remove unexpected `generate` inputs (TODO @joao: fix trainer and examples),1
+# TODO (sanchit): move this exception to GenerationConfig.validate() when TF & FLAX are aligned with PT,2
+# TODO (joao): find a strategy to specify the order of the processors,2
+"# TODO(joao): remove this function in v4.50, i.e. when we remove the inheritance of `GenerationMixin` from",1
+# TODO: A better way to handle this.,2
+# TODO joao: when we can detect `fullgraph=True` in `torch.compile` (https://github.com/pytorch/pytorch/pull/120400),3
+"# TODO(joao): this is not torch.compile-friendly, find a work-around. If the cache is not empty,",1
+"# TODO(joao): support static caches in assisted generation. assisted generation needs to roll back caches,",2
+# TODO (joao): generalize this check with other types of inputs,3
+# TODO (joao): remove `user_defined_cache` after v4.47 (remove default conversion to legacy format),1
+# TODO (joao): remove this when torch's support for control flow is not experimental (https://pytorch.org/docs/stable/generated/torch.cond.html),1
+"# TODO (joao): this OP throws ""skipping cudagraphs due to ['incompatible ops']"", find solution",1
+TODO: standardize cache formats and make all models compatible with `Cache`. It would remove the need,2
+# TODO: Move BatchFeature to be imported by both image_processing_utils and image_processing_utils,2
+# TODO: (Amy) - factor out the common parts of this and the feature extractor,2
+# TODO (Amy): Accept 1/3/4 channel numpy array as input and return np.array as default,3
+# TODO raise a warning here instead of simply logging?,4
+# TODO: The default inputs only work for text models. We need to add support for vision/audio models.,2
+# TODO use valid to mask invalid areas due to padding in loss,2
+"# TODO: When tracing with TorchDynamo with fullgraph=True, the model is recompiled depending on the input",2
+# TODO: maybe revisit this with https://github.com/pytorch/pytorch/pull/114823 in PyTorch 2.3.,4
+"# TODO: For dynamo, rather use a check on fullgraph=True once this is possible (https://github.com/pytorch/pytorch/pull/120400).",3
+"# TODO: Remove the `query_length != 1` check once Flash Attention for RoCm is bumped to 2.1. For details, please see the comment in transformers.models.llama.modeling_llama.LlamaFlashAttention2.__init__.",3
+# TODO (joao): use the new `original_max_position_embeddings` from rope_scaling,3
+# TODO (joao): update logic for the inclusion of `original_max_position_embeddings`,2
+# TODO Matt: This is a workaround for older versions of datasets that are missing the `cols_to_retain`,4
+# TODO (joao): flagged for replacement (by `_v2_resized_token_embeddings`) due to embeddings refactor,1
+# TODO (joao): flagged for delection due to embeddings refactor,1
+# TODO (joao): flagged for replacement (by `_v2_resize_token_embeddings`) due to embeddings refactor,1
+# TODO (joao): this one probably needs a v2 version with other models,2
+# TODO (joao): flagged for replacement (by `_v2_get_resized_lm_head_bias`) due to embeddings refactor,1
+# TODO (joao): flagged for replacement (by `_v2_get_resized_embeddings`) due to embeddings refactor,1
+"# TODO Matt: This is a temporary workaround to allow weight renaming, but requires a method",1
+TODO(Patrick): Delete safety argument `_enable=True` at next major version. .,2
+# TODO: @sgugger replace this check with version check at the next `accelerate` release,1
+# TODO: group all errors and raise at the end.,2
+# TODO: consider removing used param_parts from state_dict before return,2
+# TODO (joao): remove `GenerationMixin` inheritance in v4.50,1
+expected_keys = loaded_state_dict_keys  # plug for missing expected_keys. TODO: replace with proper keys,2
