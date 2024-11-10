@@ -1,0 +1,201 @@
+todo_text,priority
+# TODO @ArthurZucker remove this once docker is easier to build,1
+# TODO: Give warnings.,2
+# TODO: not hardcoded,2
+"# TODO use  decode_one_token(model, input_id.clone(), cache_position) for verification",1
+# TODO: move to self.save_hyperparameters(),1
+"num_devices = max(1, self.hparams.gpus)  # TODO: consider num_tpu_cores",0
+# TODO: remove with PyTorch 1.6 since pl uses native amp,0
+# TODO(@stas00): add whatever metadata to metrics,0
+# TODO clean up all this to leverage built-in features of tokenizers,0
+"# TODO (joao): remove the `if` below, only used for BC",1
+"self.register_buffer(""inv_freq"", inv_freq, persistent=False)  # TODO joao: may break with compilation",0
+"# TODO (joao): remove in v4.46 (RoPE is computed in the model, not in the decoder layers)",0
+# TODO: Should be removed once Flash Attention for RoCm is bumped to 2.1.,0
+"# TODO: These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim]. We would need to refactor the KV cache",1
+"# TODO: Improve this warning with e.g. `model.config.attn_implementation = ""manual""` once this is implemented.",2
+"# TODO: Improve this warning with e.g. `model.config._attn_implementation = ""manual""` once implemented.",2
+"reduce_labels=args.do_reduce_labels,  # TODO: remove when mask2former support `do_reduce_labels`",0
+# TODO support datasets from local folders,1
+# TODO (Sanchit): deprecate these arguments in v4.41,0
+# TODO fix mask_token_id setup when configurations will be synchronized between models and tokenizers,0
+yield buffer_per_group[group_id]  # TODO,2
+# TODO in original code this is written as number of actual batches seen,1
+"# TODO: weights should be initialized in pjitted fun, this won't work for REALLY large modelswhen loading from pre-trained model we need to make sure the vocab is divisible by num_partitions",1
+"# TODO: optax returns different state for different optimizers, how can we handle this generically ?",2
+# TODO: allow loading weights on CPU in pre-trained model,1
+# TODO: try to use TrainState instead of passing params and opt_state individually,2
+wiki40b_gpu_index_flat.add(wiki40b_passage_reps)  # TODO fix for larger GPU,0
+# TODO: Add ACT2FN reference to change activation function,1
+# TODO(kchoro): Get rid of the constant below.,2
+# TODO fix this comment (SUMANTH),2
+# TODO: Check the layer-norm consistency of this with trained discriminator (Sumanth),1
+# TODO why we need to do this assignment and not just using unpert_past? (Sumanth),1
+# TODO: turn on args.do_predict when PL bug fixed.,0
+"""fp16"": False,  # TODO(SS): set this to CUDA_AVAILABLE if ci installs apex or start using native amp",0
+# TODO: understand why this breaks,0
+# TODO(SS): make a wandb summary metric for this,1
+"# TODO(elgeish) return a pipeline (e.g., from jiwer) instead? Or rely on branch predictor as is",1
+def prepare_example(example):  # TODO(elgeish) make use of multiprocessing?,1
+## TODO,2
+# TODO: observation naming could allow for different names of same type,1
+# TODO This method does not support batching yet as we are mainly focused on inference.,1
+# TODO(PVP): currently only single GPU is supported,2
+# TODO: Currently only single GPU is supported,2
+"info[""num_gpus""] = 1  # TODO(PVP) Currently only single GPU is supported",2
+# TODO(PVP): See if we can add more information about TPU,2
+# TODO: deprecate this function in favor of `cache_position`,1
+# TODO (joao): remove `=None` in non-optional arguments in v4.46. Remove from `OBJECTS_TO_IGNORE` as well.,1
+"# TODO(gante, sanchit-gandhi): move following functionality into `.generate`",2
+# TODO(gante): Remove this.,1
+# TODO: Find some kind of fallback if there is no _CHECKPOINT_FOR_DOC in any of the modeling file.,0
+# TODO (joao): delete file in v4.47,1
+# Tokenizer arguments TODO: eventually tokenizer and models should share the same config,1
+# TODO (joao): this should be an exception if the user has modified the loaded config. See #33886,2
+"# TODO: randomness could apply a random seed, ex. rng = random.Random(random_seed)",2
+encoded_dict = tokenizer.encode_plus(  # TODO(thom) update this logic,1
+"# TODO joao: find out a way of not depending on external fields (e.g. `assistant_model`), then make this a",1
+# TODO(Patrick): Make sure that official models have max_initial_timestamp_index set to 50,0
+# TODO (Joao): this function might trigger XLA retracing as `cur_len` increases. Fix it if it becomes,1
+# TODO (joao): enable XLA on this logits processor. See discussion and attempts in,1
+# TODO (Joao): fix cache format or find programatic way to detect cache index,0
+# TODO (joao): remove the equivalent classes and typing shortcuts below in v5,0
+# 8. Remove unexpected `generate` inputs (TODO @joao: fix trainer and examples),0
+# TODO (sanchit): move this exception to GenerationConfig.validate() when TF & FLAX are aligned with PT,1
+# TODO (joao): find a strategy to specify the order of the processors,1
+"# TODO(joao): remove this function in v4.50, i.e. when we remove the inheritance of `GenerationMixin` from",0
+# TODO: A better way to handle this.,2
+# TODO joao: when we can detect `fullgraph=True` in `torch.compile` (https://github.com/pytorch/pytorch/pull/120400),0
+"# TODO(joao): this is not torch.compile-friendly, find a work-around. If the cache is not empty,",0
+"# TODO(joao): support static caches in assisted generation. assisted generation needs to roll back caches,",0
+# TODO (joao): generalize this check with other types of inputs,1
+# TODO (joao): remove `user_defined_cache` after v4.47 (remove default conversion to legacy format),0
+# TODO (joao): remove this when torch's support for control flow is not experimental (https://pytorch.org/docs/stable/generated/torch.cond.html),0
+"# TODO (joao): this OP throws ""skipping cudagraphs due to ['incompatible ops']"", find solution",0
+TODO: standardize cache formats and make all models compatible with `Cache`. It would remove the need,0
+# TODO: Move BatchFeature to be imported by both image_processing_utils and image_processing_utils,2
+# TODO: (Amy) - factor out the common parts of this and the feature extractor,2
+# TODO (Amy): Accept 1/3/4 channel numpy array as input and return np.array as default,1
+# TODO raise a warning here instead of simply logging?,2
+# TODO: The default inputs only work for text models. We need to add support for vision/audio models.,0
+# TODO use valid to mask invalid areas due to padding in loss,0
+"# TODO: When tracing with TorchDynamo with fullgraph=True, the model is recompiled depending on the input",1
+# TODO: maybe revisit this with https://github.com/pytorch/pytorch/pull/114823 in PyTorch 2.3.,0
+"# TODO: For dynamo, rather use a check on fullgraph=True once this is possible (https://github.com/pytorch/pytorch/pull/120400).",1
+"# TODO: Remove the `query_length != 1` check once Flash Attention for RoCm is bumped to 2.1. For details, please see the comment in transformers.models.llama.modeling_llama.LlamaFlashAttention2.__init__.",0
+# TODO (joao): use the new `original_max_position_embeddings` from rope_scaling,2
+# TODO (joao): update logic for the inclusion of `original_max_position_embeddings`,1
+# TODO Matt: This is a workaround for older versions of datasets that are missing the `cols_to_retain`,2
+# TODO (joao): flagged for replacement (by `_v2_resized_token_embeddings`) due to embeddings refactor,0
+# TODO (joao): flagged for delection due to embeddings refactor,0
+# TODO (joao): flagged for replacement (by `_v2_resize_token_embeddings`) due to embeddings refactor,0
+# TODO (joao): this one probably needs a v2 version with other models,1
+# TODO (joao): flagged for replacement (by `_v2_get_resized_lm_head_bias`) due to embeddings refactor,0
+# TODO (joao): flagged for replacement (by `_v2_get_resized_embeddings`) due to embeddings refactor,0
+"# TODO Matt: This is a temporary workaround to allow weight renaming, but requires a method",1
+TODO(Patrick): Delete safety argument `_enable=True` at next major version. .,0
+# TODO: @sgugger replace this check with version check at the next `accelerate` release,0
+# TODO: group all errors and raise at the end.,1
+# TODO: consider removing used param_parts from state_dict before return,2
+# TODO (joao): remove `GenerationMixin` inheritance in v4.50,0
+expected_keys = loaded_state_dict_keys  # plug for missing expected_keys. TODO: replace with proper keys,1
+# TODO: Convert dataset to Parquet,1
+# TODO (joao): nested from_dict,2
+# TODO (joao):workaround until nested generation config is compatible with PreTrained Modeldict,1
+# TODO: figure this case out.,0
+# TODO: test this.,0
+"# TODO: Improve this warning with e.g. `model.config._attn_implementation = ""manual""` once this is implemented.",2
+# TODO this class is useless. This is the most standard sentencpiece model. Let's find which one is closest and nuke this.,1
+# TODO: add support for other frameworks,0
+# ToDo: Update with http://en.wikipedia.org/wiki/List_of_emoticons ?,0
+# TODO(PVP): need to verify if below code is correct,0
+# TODO @ArthurZucker bring copied from back,1
+# TODO: Implement attention with SDPA for TimeSeriesTransformer.,1
+"# TODO (joao, raushan): refactor `generate` to avoid these operations with VLMs",1
+# TODO: how to do that better?,2
+"TODO @thomasw21 this doesn't work as nicely due to the masking strategy, and so masking varies slightly.",2
+"# TODO @ArthurZucker this can only work one way for now, to update later-on. Tests should also properly",1
+# TODO: remove this once the Hub files are updated.,0
+"additional_special_tokens=additional_special_tokens,  # TODO extra ids are not used :sweatywmile:",1
+# TODO decode outputs do not match between fast and slow,0
+# TODO add support for MLM,0
+# TODO(joao): add me back asap :),0
+"self.register_buffer(""inv_freq"", inv_freq, persistent=False)  # TODO joao: this may break with compilation",0
+"# TODO: These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim].",1
+"# TODO: As is this currently fails with saved_model=True, because",2
+# TODO(enijkamp): factor out number of logical TPU-v4 cores or make forward pass agnostic,1
+"# TODO ArthurZ let's rely on the template processor instead, refactor all fast tokenizers",1
+# POSTPROCESSING METHODS - TODO: add support for other frameworks,0
+# TODO find a better way of exposing other arguments,1
+# TODO: don't match quantizer.weight_proj,1
+# TODO: These transpose are quite inefficient but Flash Attention requires the layout,1
+# TODO: We should check if the opset_version being used to export,1
+# TODO add a deprecation cycle as this can have different behaviour from our API,0
+# TODO: valid_ratios could be useless here. check https://github.com/fundamentalvision/Deformable-DETR/issues/36,1
+# TODO: maybe have a cleaner way to cast the input (from `ImageProcessor` side?),1
+# TODO fix this,0
+# TODO: Support arbitrary patch sizes.,1
+# TODO can we simplify this?,2
+# TODO (Qian): is it possible to revert the original cell if it is in the final answer?,1
+# TODO ArthurZ fairseq_ids_to_tokens should be removed,1
+# TODO - (Amy) make compatible with other frameworks,1
+# TODO (Amy) - update to use `rescale_factor` instead of `scale`,1
+# TODO there's still a small difference with the original logits,1
+# TODO (joao): the `TFBaseModelOutput` wrapper should not be needed after the generate refactor is complete,2
+# TODO Update this,0
+"# TODO Add information to the docstring about any methods that convert to PDB format, or otherwise prepare",2
+# TODO: ^ interpret this,2
+# TODO: this file should be downloaded in a setup script,1
+"# TODO, all the tokens are added? But they are also part of the vocab... bit strange.",1
+"# TODO (raushan): remove in v4.46 (RoPE is computed in the model, not in the decoder layers)",0
+"# TODO: As of torch==2.2.0, the `attention_mask` passed to the model in `generate` is 2D and of dynamic length even when the static",1
+# TODO: Check fp32 layer norm possiblity,1
+# TODO:,2
+# TODO(SS): do we need to ignore pad tokens in labels?,1
+# TODO: deal with head_mask,0
+Sample usage: # TODO fix clone links from persimmon to fuyu,0
+# TODO refer to https://github.com/ArthurZucker/transformers/blob/0f0a3fe5ca5697ee58faeb5b53f049af720b5e98/src/transformers/models/vit_mae/modeling_vit_mae.py#L871,1
+# TODO Remove this logic in a subsequent release since subsequences are not supported.,0
+self.max_position_embeddings = 16384  # TODO Can't derive this from model files: where to set it?,2
+"""git-base-textvqa"": ""https://publicgit.blob.core.windows.net/data/output/GIT_BASE_TEXTVQA/snapshot/model.pt"",  # todo",2
+"# TODO: Could have better fused kernels depending on scaling, dropout and head mask.",1
+_supports_static_cache = False  # TODO: needs a HybridCache,0
+"# TODO: Check if this is needed, as it ensures that decode(encode(doc)) != doc by adding extra whitespace in the decoded document",2
+# TODO: (amy) add support for other frameworks,0
+"# TODO Matt: Assigning to attributes in call() is deeply sinful in TensorFlow, as it should be idempotent.",0
+# TODO(ls): Add cross attention values to respective lists,1
+# TODO add this in the generate method?,1
+# TODO: remove the redundant computation,2
+# TODO replace this with,1
+# TODO: This code is most likely not very efficient and should be improved,1
+# TODO (Joao): investigate why LED has numerical issues in XLA generate,0
+# TODO: @raushan retain only the new behavior after v4.47,0
+# TODO: Update before the merge,0
+_supports_static_cache = False  # TODO: @raushan more involved due to local/global attn,1
+# TODO(thom): Add z_loss https://github.com/tensorflow/mesh/blob/fa19d69eafc9a482aff0b59ddd96b025c0cb207d/mesh_tensorflow/layers.py#L666,1
+# TODO there is likely a cleverer way to do this,1
+# TODO but we should be able to use cache_position though at a later time,1
+# TODO: (Amy) Move to image_transforms,1
+# TODO: (Amy),2
+"# TODO add support for ResNet-C backbone, which uses a ""deeplab"" stem",1
+# TODO,2
+# TODO @longjie no longer copied from Mistral after static cache,1
+# TODO (Raushan): bring back copied after compile compatibility,1
+"# TODO: we have no attention_mask so this won't work, check if we really won't need attention mask and find another way",0
+"# TODO: Can we do it that way or its better include as ""Copied from ...""",1
+TODO: add aspect_ratio_ids and aspect_ratio_mask and cross_attention_mask,1
+# TODO check if the t5/llama PR also applies here,1
+"""transformers_version"": ""4.32.0.dev0"",  # TODO",0
+# todo check in the config if router loss enables,0
+# TODO Come up with footnote formatting inside a table,2
+# TODO: Layernorm stuffmulti query attention,1
+# TODO: Deal with weight-tying,1
+# todo add denoising for training,1
+)  # TODO after merge add position_ids=position_ids,0
+# TODO: (Amy) Make compatible with other frameworks,1
+# TODO add sequence length variations here,1
+# TODO verify correctness of layer norm loading,0
+# TODO ArthurZ refactor this to only use the added_tokens_encoder,1
+# TODO @ArthurZ refactor this as well....,1
+# TODO @Arthur no longer copied from LLama after static cache,2
+# TODO maybe make it torch compatible later on. We can also just slice,0

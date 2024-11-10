@@ -105,13 +105,13 @@ class GitHubTodoCrawler:
     def ask_for_annotation(self, line_number: int, todo: str) -> int:
         while True:
             try:
-                priority = int(input(f"Enter priority for TODO: '{todo}' (1 to 4): "))
-                if 1 <= priority <= 4:
+                priority = int(input(f"Enter priority for TODO: '{todo}' (0 to 2): "))
+                if 0 <= priority <= 2:
                     break
                 else:
-                    print("Please enter a number between 1 and 4.")
+                    print("Please enter a number between 0 and 2.")
             except ValueError:
-                print("Invalid input. Please enter a valid integer between 1 and 4.")
+                print("Invalid input. Please enter a valid integer between 0 and 2.")
         print(f"Line {line_number}: Priority {priority} - {todo}")
         return priority
 
