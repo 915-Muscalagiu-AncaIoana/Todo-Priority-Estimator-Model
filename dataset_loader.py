@@ -30,7 +30,7 @@ class CometDatasetLoader:
     def download_dataset(self):
         logged_artifact = self.experiment.get_artifact(artifact_name=self.artifact_name)
         logged_artifact.download("./data")
-        data = pd.read_csv(f"./data/{self.artifact_name}_200.csv")
+        data = pd.read_csv(f"./data/{self.artifact_name}_200.csv")  # Ensure filename matches
         data['todo_text'] = data['todo_text'].apply(clean_todo_text)
         return data
 

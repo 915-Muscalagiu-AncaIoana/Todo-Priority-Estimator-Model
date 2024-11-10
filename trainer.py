@@ -4,12 +4,49 @@ from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer, BertForSequenceClassification, TrainingArguments, DataCollatorWithPadding, \
     Trainer
 import torch
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, log_loss
+import numpy as np
+import random
+
+
+# Set a fixed seed for reproducibility
+def set_seed(seed=50):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+# Set the seed
+set_seed(50)
+
+
+def compute_metrics(pred):
+    labels = pred.label_ids
+    preds = pred.predictions.argmax(-1)
+
+    accuracy = accuracy_score(labels, preds)
+    precision = precision_score(labels, preds, average='weighted')
+    recall = recall_score(labels, preds, average='weighted')
+    f1 = f1_score(labels, preds, average='weighted')
+
+    probs = np.exp(pred.predictions) / np.sum(np.exp(pred.predictions), axis=1, keepdims=True)
+    loss = log_loss(labels, probs)
+
+    return {
+        'accuracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'f1': f1,
+        'cross_entropy_loss': loss
+    }
 
 
 class TodoClassifierTrainer:
     def __init__(self, experiment, dataset, tokenizer_name="bert-base-uncased"):
         self.tokenizer = BertTokenizer.from_pretrained(tokenizer_name)
-        self.model = BertForSequenceClassification.from_pretrained(tokenizer_name, num_labels=5)
+        self.model = BertForSequenceClassification.from_pretrained(tokenizer_name, num_labels=3)
 
         # Move model to GPU if available
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -48,11 +85,12 @@ class TodoClassifierTrainer:
             learning_rate=2e-5,
             per_device_train_batch_size=8,
             per_device_eval_batch_size=8,
-            num_train_epochs=20,
+            num_train_epochs=4,
             weight_decay=0.01,
             logging_dir='./logs',
-            logging_steps=10,
-            report_to="comet_ml"
+            logging_steps=2,
+            report_to="comet_ml",
+            seed=50
         )
 
         trainer = Trainer(
@@ -62,6 +100,7 @@ class TodoClassifierTrainer:
             eval_dataset=self.val_dataset,
             tokenizer=self.tokenizer,
             data_collator=DataCollatorWithPadding(self.tokenizer),
+            compute_metrics=compute_metrics
         )
 
         trainer.train()
