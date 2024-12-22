@@ -1,0 +1,442 @@
+todo_text,priority
+# TODO(mattdangerw): for better performance we should rewrite this,1
+# TODO: consider unifying both paths.,1
+# TODO: consider unifying both paths.,1
+# TODO: fix bug with include_special_tokens and set reload from file.,1
+# TODO(rachelim): `model.predict` predicts the result on each,1
+# TODO(b/149526183): Can't clear session when TF2 is disabled.,1
+# TODO(rachelim): `model.predict` predicts the result on each,1
+# TODO(rachelim): `model.predict` predicts the result on each,1
+# TODO(omalleyt): We need a better way to check this in order to,1
+# TODO(b/148821952): Should these specs have a name attr?,1
+# TODO(b/203201161) Remove this deepcopy one type_spec_with_shape has been,1
+# TODO(rameshsampath): Need a better logic for local vs remote path,1
+"# TODO: if h5 filepath is remote, create the file in a temporary directory",1
+# TODO: download file if h5 filepath is remote,1
+# TODO(kathywu): Some metric variables loaded from SavedModel are never,0
+# TODO(b/246438937): Remove the special case for tf.Variable once,0
+# TODO(scottzhu): Remove the kwargs for force_generator.,1
+# TODO(b/167482354): Change this back to normal init when the bug is,0
+# TODO(b/262894693): Avoid the broadcast of tensor to all devices.,1
+# TODO(b/127668432): Consider using autograph to generate these,0
+# TODO(b/138862903): Handle the case when training is tensor.,1
+"# TODO(priyag, yuefengz): Remove this workaround when Distribute",0
+# TODO(b/149317164): Currently FuncGraphs use ops.get_default_graph() as,0
+# TODO(fishx): Add a link to the full profiler tutorial.,1
+# TODO(psv): Add integration tests to test embedding visualization,1
+# TODO(psv): Make sure the callback works correctly when min_delta,0
+# TODO(omalleyt): Make this attr public once solution is stable.,1
+# TODO(rchao): Legacy TF1 code path may use list for,0
+# TODO(rchao): Remove the arg during next breaking release.,1
+# TODO(omalleyt): Add integration tests.,1
+# TODO(b/151339474): Fix deadlock when not using .value() here.,1
+# TODO(b/126388999): Remove step info in the summary name.,1
+# TODO(cpeter): Switch map_fn for a faster tf.vectorized_map once,0
+# TODO(b/120949004): Re-enable garbage collection check,0
+# TODO(b/120571621): Make `ON_READ` work with Keras metrics on TPU.,1
+# TODO(b/1949359300): `load_for_serving_under_strategy=True` flakily,0
+# TODO(b/183044870) TPU strategies with soft placement do not yet work.,1
+# TODO(b/188763034): Proceed to export the strategy combinations as public APIs.,1
+"""TODO(b/168036682): Support dynamic padder""",0
+# TODO(b/182278926): Combine this test with other strategies.,1
+# TODO(rchao): Add a test to demonstrate gather with MWMS.,1
+# TODO(vbardiovsky): It would be nice if exported protos reached a fixed,0
+# TODO(b/224861663): Enable this test.,1
+# TODO(b/224862394): Add support for tf.Conv3DBackpropInputV2,0
+# TODO(scottzhu): Probably add more coverage for all the layers.,1
+# TODO(scottzhu): This method and create_and_initialize might be removed if,0
+# TODO(b/222160686): Add Identity after after we have SPMD support for,0
+# TODO(hthu): Remove the reset once we fixed the CopyToMesh with,0
+# TODO(scottzhu): Finalize the strategy API to check if a strategy is backed,0
+# TODO(b/228209108): Revisit this in future and see if we can just reuse the,0
+# TODO(b/228209108): Revisit this after we can reinit LazyInitVariable.,1
+# TODO(b/161925288): Fix the dispatch triggering then uncomment:,0
+# TODO(b/161925288): Fix the bug then uncomment:,0
+# TODO(pmol): Allow higher dimension inputs. Currently the input is,0
+# TODO(b/125916026): Consider exposing a __call__ method with named args.,1
+# TODO(fchollet): remove this when TF pooling is feature-complete.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(reedwm): Support fp64 in FusedBatchNorm then remove this check.,1
+"# TODO(yaozhang): if input is not 4D, reshape it to 4D and reshape",0
+# TODO(chrisying): fused batch norm is currently not supported for,0
+# TODO(b/195085185): remove experimental_enable_get_next_as_optional,0
+# TODO(b/129279393): Support zero batch input in non,1
+# TODO(rmlarsen): Support using fused avg updates for non-eager,0
+# TODO(yuefengz): colocate the operations,0
+# TODO(b/163099951): batch the all-reduces once we sort out the,0
+# TODO(b/129279393): Support zero batch input in non,1
+# TODO(b/272382109): Implement this an an Op.,1
+# TODO(b/229545225): Remove the RaggedTensor check.,1
+# TODO(fchollet): enable in all execution modes when issue with,0
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(fchollet): refactor when a native separable_conv1d op is,0
+# TODO(scottzhu): Extract this into a utility function that can be,0
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/62340061): Support channels_first on CPU.,1
+# TODO(b/213173659): remove this when grouped convolutions are fully,0
+"# TODO(tanzheny): Add examples, here and everywhere.",0
+# TODO(b/137303934): Consider incorporating something like this Close vs All,0
+# TODO(b/184863356): remove the numpy escape hatch here.,1
+# TODO(b/190445202): remove output rank restriction.,1
+# TODO(b/180614455): remove this check when MLIR bridge is always,0
+# TODO(b/159738418): large image input causes OOM in ubuntu multi gpu.,1
+# TODO(rachelim): `model.predict` predicts the result on each,0
+# TODO(b/180614455): remove this check when MLIR bridge is always,0
+# TODO(b/128684069): Remove when Wrapper sublayers are __call__'d.,1
+# TODO(kaftan): after KerasTensor refactor TF op layers should work,0
+# TODO(scottzhu): Should we accept multiple different masks?,0
+# TODO(scottzhu): Should we accept multiple different masks?,0
+# TODO (b/169895267): test with xla_gpu is disabled.,1
+# TODO(allenl): Track down non-Trackable callers.,1
+# TODO(scottzhu): check why v1 session failed.,1
+# TODO(b/128682878): Remove when RNNCells are __call__'d.,1
+# TODO (b/169895267): test with xla_gpu is disabled.,1
+# TODO(b/169707691): The wrapper can be removed if TFLite doesn't need to rely,0
+# TODO(tibell): Figure out the right dtype and apply masking.,1
+# TODO(psv): Add tests cases where a model is used in loss function but is,0
+# TODO(https://github.com/tensorflow/tensorboard/issues/2885): remove,0
+# TODO(https://github.com/tensorflow/tensorboard/issues/2885): remove,0
+# TODO(b/129700800): Enable after bug is fixed.,1
+# TODO(allenl): Debug garbage created by this test in python3.,1
+# TODO(allenl): Use a Dataset and serialize/checkpoint it.,1
+"# TODO(tanzheny): Add hyper variables to .variables(), and set",0
+# TODO(allenl): Make initialization more pleasant when graph,0
+# TODO(allenl): Debug garbage created by this test in python3.,1
+# TODO(allenl): Use a Dataset and serialize/checkpoint it.,1
+# TODO(kkb): Fix the slowness on Forge.,1
+# TODO(kkb): Fix the slowness on Forge.,1
+# TODO(b/121381184): Enable running the test in this case.,1
+# TODO(reedwm): Support and test saving model with a mixed_[b]float16,0
+# TODO(b/121381184): Enable running the test in this case.,1
+# TODO(reedwm): Always save/restore the loss scale with Model.save().,1
+# TODO(b/145686977): Log if the policy is 'mixed_bfloat16'. This,0
+# TODO(reedwm): Make this thread local?,0
+# TODO(reedwm): Make this thread local,0
+# TODO(b/215568552): Remove this as the delegation is handled by metaclass.,1
+# TODO(b/121381184): Enable running the test in this case.,1
+# TODO(b/146181571): This logic can be simplified once,0
+# TODO(reedwm): Maybe encode the fact the variable is an AutoCastVariable in,1
+# TODO(reedwm/kathywu): Find a better way to support SavedModel. Exposing,0
+TODO(reedwm): Find/implement a better way of preventing values from being,0
+# TODO(b/215389169): Delete this class after `OptimizerV2` is deprecated.,1
+# TODO(b/215389169): Delete this class after `OptimizerV2` is deprecated.,1
+# TODO(reedwm): Maybe support this. The difficulty is that LSO has,0
+# TODO(reedwm): This will raise a fairly cryptic error message if,0
+# TODO(reedwm): Maybe throw an error if mixed precision is used without this,0
+# TODO(reedwm): Maybe support this. The difficulty is that LSO has,0
+# TODO(reedwm): Support all strategies.,1
+# TODO(b/134426265): Switch back to single-quotes once the issue,0
+# TODO(b/130381733): Make this an attribute in base_layer.Layer.,1
+# TODO(rchao): Remove this except block once b/150954027 is,0
+# TODO(fchollet): consider making num_parallel_calls settable,0
+# propagation through the layer.) TODO(b/124796939): Investigate this.,1
+# TODO(momernick): What's the best way of validating that fit,0
+# TODO(momernick): What's the best way of validating that fit,0
+# TODO(psv): Test distribution of metrics using different,0
+# TODO: consider rewriting this to instead iterate on the,0
+# TODO: consider adding an adapt progress bar.,1
+"# TODO(b/121277734):Skip Eager contexts, as Input() layers raise an",0
+"# TODO(b/121277734):Skip Eager contexts, as Input() layers raise an",0
+# TODO(b/162887610): This may need to adjust the inbound node index if the,0
+# TODO(b/221261361): Clean up private symbols usage and remove these imports.,1
+# TODO(b/202992598): Add PSS strategy once the XLA issues is resolved.,1
+# TODO(b/204321487): Add nesterov acceleration.,1
+# TODO(b/228209527): Combine this test with optimizer_test after,0
+# TODO(b/183257003): Remove this branch,0
+# TODO(b/199214315): replace _unique_id with ref() after fixing ref(),0
+# TODO(b/197554203): replace _distributed_container() with a public api.,1
+# TODO(b/121051441): fix test flakiness.,1
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+# TODO(joshl): Test that we handle weight decay in a reasonable way.,1
+# TODO(tanzheny): Maybe share this logic with base_layer.,1
+# TODO(allenl): Make the restored optimizer functional by tracing its apply,0
+# TODO(allenl): Save and restore the Optimizer's config,0
+# TODO(lxuechen): This is hard to test in eager mode,0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+# TODO(b/141710709): complex support in NVCC and ROCM.,1
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+"# TODO(tanzheny, omalleyt): Fix test in eager mode.",0
+# TODO(yuefengz): figure out why the optimizer here is still a,0
+# TODO(b/123918215): Possibly merge this Callback with keras_test.Counter.,1
+# TODO(rchao): Add other method calls to verify.,1
+"# TODO(b/124171024): In between-graph replication, by default only",0
+"use_adapt=[False],  # TODO(b/180742437): Add tests for using adapt.",0
+# TODO(b/183956672): Re-enable,0
+# TODO(shiningsun): consider adding the other v1 optimizers,0
+# TODO(shiningsun): consider adding the other v2 optimizers,0
+# TODO(rchao): Investigate why there cannot be single worker and multi worker,0
+# TODO(jhseu): Disabled to fix b/130808953. Need to investigate why it,0
+# TODO(sourabhbajaj): Enable tests for eager mode,0
+# TODO(b/118776054): Use global batch size for Keras/DS support.,1
+# TODO(b/119894254): Enable this test for all cases once the,0
+# TODO(isaprykin):  Allow False here.  Currently subsequent,0
+# TODO(priyag): batch with drop_remainder=True causes shapes to,0
+"""TODO(b/168036682): Support dynamic padder""",0
+TODO(rchao): Remove this module once TF1 is not supported.,1
+# TODO(yuefengz): we should throw an error in independent worker,0
+# TODO(yuefengz): propagate cluster_spec in the STANDALONE_CLIENT mode.,1
+# TODO(yuefengz): we may need a smart way to figure out whether the current task,0
+# TODO(yuefengz): validate cluster_spec.,1
+# TODO(yuefengz): optimizer with slot variables doesn't work because of,0
+# TODO(yuefengz): we should not allow non-v2 optimizer.,1
+# TODO(yuefengz): move the following implementation to Keras core.,1
+# TODO(yuefengz): verify the var creation order matches the weights,0
+# TODO(yuefengz): make _create_per_worker_resources public and get rid,0
+# TODO(yuefengz): integrate it into model.evaluate.,1
+# TODO(yuefengz): we should return the internal state of the metric,0
+# TODO(anjalisridhar): Add a decorator that will allow us to run these tests as,0
+# TODO(anjalisridhar): Change the output dimension of the second Dense layer,0
+# TODO(anjalisridhar): We need tests for when the batch size and,0
+# TODO(anjalisridhar): We need tests for when the batch size and,0
+# TODO(b/155867206): Investigate why this test occasionally segfaults on,1
+"""TODO(b/120943676, b/120957836): Re-enable for graph once the """,0
+# TODO(anjalisridhar): Modify this test to use Lambdas since we can,1
+# TODO(psv/anjalisridhar): Enable these lines after we fix,0
+# TODO(wxinyi): add a multi-worker test for TPU,0
+# TODO(omalleyt): Investigate flakiness and re-enable.,1
+# TODO(phillypham): Why does validation_steps > 1 not work on TPUs?,0
+# TODO(isaprykin): batch with drop_remainder causes shapes to be,0
+# TODO(anjs): Identify why this particular V1 optimizer needs a higher,0
+"self.skipTest(""TODO(b/234354008): Requires fetching data from network."")",0
+# TODO(priyag): Return only non empty/None values,0
+# TODO(b/118776054): Use global batch size for Keras/DS support.,1
+"# TODO(b/128995245): In eager mode, uneven batch sizes are allowed except",0
+# TODO(b/124535720): Remove once this standarize data logic is shared,0
+# TODO(b/134069401): Create a cache for the distributed model and exec,0
+# TODO(rchao): Consider providing a ModelCheckpoint here if the user,0
+# TODO(b/130808953): Switch back to the V1 optimizer after,0
+# TODO(b/123360757): Add tests for using list as inputs for multi-input,0
+# TODO(priyag): Enable all strategies for this test. Currently it does not,0
+# TODO(b/146181571): Enable this for all distribution strategies once,0
+# TODO(b/123533246): Enable the test for TPU once bug is fixed,0
+# TODO(anjalisridhar): Consider removing the check for multi worker mode,0
+# TODO(b/118776054): Currently we support global batch size for TPUStrategy and,0
+# TODO(b/132666209): Remove this function when we support assign_*,0
+# TODO(b/120571621): TPUStrategy does not implement replica-local variables.,1
+# TODO(b/142509827): In rare cases this errors out at C++ level with the,0
+# TODO(kaftan): Possibly enable 'subclass_custom_build' when tests begin to pass,0
+# TODO(yashkatariya): Add other tensor's string substitutions too.,1
+# TODO(xingyulong): we will add tfds support later and,0
+# TODO(b/173461426),0
+# TODO(b/153480400),0
+# TODO(b/173461426),0
+# TODO(scottzhu): Change this to the GCS path.,1
+"self.skipTest(""TODO(b/227700184): Re-enable."")",0
+# TODO(alive): get this to  work in eager mode.,1
+# TODO(alive): get this to  work in eager mode.,1
+# TODO(mihaimaruseac): Not converted to use wrap_function because of,0
+# TODO(fchollet): deprecate collection below.,1
+# TODO(nkovela): Debug serialization of decorated functions inside lambdas,0
+# TODO(nkovela): Add TF ops dispatch handler serialization for,0
+# TODO(b/130258301): add utility method for detecting model type.,1
+# TODO(b/172853147): Test control flow here.,1
+# TODO(mdan): tests using _import_and_infer should uniformly do this.,1
+# TODO(psv/kathywu): use this implementation in model to estimator flow.,1
+# TODO(tibell): Figure out the right dtype and apply masking.,1
+# TODO(b/153110928): Keras TF format doesn't restore optimizer,0
+# TODO(b/173646281): HDF5 format currently does not allow saving,0
+# TODO(b/134426265): Switch back to single-quotes to match the rest of the file,0
+# TODO(psv) Add warning when we save models that contain non-serializable,0
+# TODO(b/128683857): Add integration tests between tf.keras and external,0
+# TODO(momernick): Should this also have 'module_objects'?,0
+# TODO(b/180760306) Change to del model.optimizer if Layer's __delattr__,0
+# TODO(b/134426265): Switch back to single-quotes to match the rest of the file,0
+"# TODO(kathywu): Add attributes `compile_losses` and `compile_metrics`,",0
+# TODO(kathywu): Move relevant tests from saved_model_test to,0
+# TODO(b/145029112): Bug with losses when there are,0
+# TODO(b/150403085): Investigate why the metric order changes when,1
+TODO (kathywu): Move to layer_serialization.py. Some model-specific logic should,0
+# TODO(b/134426265): Switch back to single-quotes to match the rest of the file,0
+# TODO(b/134962016): currently partial signatures are not,0
+# TODO(kathywu): Replace arguments with broader shapes defined in,1
+"# TODO(kathywu): check that serialized JSON can be loaded (e.g., if an",0
+# TODO(kathywu): Add python property validator,0
+# TODO(kathywu): Add support for metrics serialization.,1
+# TODO(kathywu): Synchronize with the keras spec (go/keras-json-spec),0
+# TODO(kathywu): Move serialization utils (and related utils from,0
+# TODO(kathywu): Add python property validator,0
+# TODO(kathywu): This is a temporary hack. When a network of layers is,0
+# TODO(b/134519980): Issue with model.fit if the model call function,1
+# TODO(b/120099662): Error with table initialization with Keras models,0
+# TODO(b/134519980): Issue with `model.fit` if the model call function,1
+# TODO(b/135550038): save functions to enable saving custom metrics.,1
+# TODO(b/134426265): Switch back to single-quotes to match the rest of the file,0
+"# TODO(kathywu): Add saving/loading of optimizer, compiled losses and",0
+# TODO(kathywu): Add code to load from objects that contain all endpoints,0
+"# TODO(kathywu): Use compiled objects from SavedModel, instead of",0
+# TODO(kathywu): Instead of outright deleting these nodes (which would,0
+# TODO(kathywu): Investigate ways to improve the config to ensure,0
+# TODO(kathywu): Centrally define keys and functions for both  serialization and,0
+# TODO(b/120931266): Enable test on subclassed models after bug causing an,1
+# TODO(b/125094323): This should be isinstance(CompositeTensor) or,0
+# TODO(b/125094323): This should be replaced by a simple call to,0
+# TODO(psv): Add num_samples check here to detect when output batch,0
+# TODO(taylorrobie): efficiently concatenate.,1
+# TODO(rohanj): This is a hack to get around not depending on feature_column and,0
+# TODO(karmel): There is a side-effect here where what you get,0
+TODO(fchollet): remove this method when no longer needed.,1
+# TODO(omalleyt): Resolve circular dependency.,1
+# TODO(b/150169018): This logic can be replaced after the Functional API,0
+# TODO(b/150169018): This logic can be removed after the Functional API,0
+# TODO(b/132076537): Remove this once TFP uses `CompositeTensor`.,1
+# TODO(kathywu): This is a temporary hack. When a network of layers is revived,0
+# TODO(kaftan) seems to throw an error when enabled.,1
+# TODO(kaftan) seems to throw an error when enabled.,1
+# TODO(mdan): Should we have a single generic type for types that can be passed,0
+# TODO(kathywu): Move this to Layer._set_save_spec once cl/290121460 is,0
+# TODO(scottzhu): Remove this once dtensor is public to end user.,1
+# TODO(b/142020079): Re-enable it once the bug is fixed.,1
+# TODO(allenl): a `make_variable` equivalent should be added as a,0
+"# TODO(fchollet): in the future, this should be handled at the",0
+"# TODO(fchollet): consider py_func as an alternative, which",0
+"# TODO(kaftan): do we maybe_build here, or have we already",0
+# TODO(kaftan): figure out if we need to do this at all,0
+# TODO(b/157486353): Investigate returning DTypes in Policy.,1
+"# TODO(reedwm): Deprecate, then remove the _dtype property.",0
+# TODO(b/180760306) Keeping the status quo of skipping _delattr__ and,0
+# TODO(b/125122625): This won't pick up on any variables added to a,0
+# TODO(b/180760306) Skip the auto trackable from tf.Module to keep,0
+# TODO(b/110718070): Remove when fixed.,1
+# TODO(b/213628533): This must be called before super() to ensure,0
+# TODO(rchao): check shapes and raise errors.,1
+# TODO(b/183990973): We should drop or consolidate these private api,0
+# TODO(b/213628533): This must be called before super() to ensure,0
+# TODO(edloper): Change this to tf.experimental.ExtensionTyep once,0
+# TODO(edloper) Remove _shape and _dtype once Keras has been,1
+# TODO(b/122726584): Investigate why concrete batch is flaky in some,0
+# TODO(kaftan) This test fails w/ run_with_all_keras_modes. File ticket,0
+# TODO(kaftan): Check performance implications of using a flatten,1
+# TODO(b/226395276): Remove _with_tensor_ranks_only usage.,1
+# TODO(scottzhu): This should be a less implementation-specific error.,1
+# TODO(b/150292341): Allow multiple async steps here.,1
+# TODO(b/152094471): Support this with DistIter.get_next_as_optional.,1
+# TODO(b/268521864): expand this to inspect dataset function graphs and,0
+# TODO(b/268226218): Support DistributedDataset input,0
+"# TODO(fchollet): consider raising here, as we should",0
+# TODO(omalleyt): b/123540974 This function is not really safe to call,0
+# TODO(omalleyt): b/123540974 This function is not really safe to call,0
+# TODO(b/151582614),0
+# TODO(omalleyt): Unify this logic with `Layer._maybe_build`.,1
+# TODO (b/159261555): move this to base layer build.,1
+# TODO(fchollet): consider using py_func to enable this.,1
+# TODO(kaftan) or TODO(scottzhu): This check should eventually be nicely,0
+# TODO(scottzhu): Update this to use the new training_endpoints.,1
+# TODO(anjalisridhar): Remove this check once we refactor the,0
+# TODO(b/131720208): We still drop remainder here if number of,0
+# TODO(fchollet): run static checks with dataset output shape(s).,1
+# TODO(momernick): This should be capable of doing full input validation,1
+# TODO(b/132691975): Document subclass-model CT input handling.,1
+# TODO(fchollet): this check could be removed in Eager mode?,0
+# TODO(omalleyt): Consider changing to a more descriptive function name.,1
+# TODO(scottzhu): Should we cleanup the self._training_endpoints here?,0
+# TODO(anjalisridhar): Do we need to save the original model here?,0
+# TODO(fchollet): consider moving `steps_per_epoch` inference to,0
+# TODO(b/133517906): Add slicing support.,1
+"# TODO(priyag, psv): Copy back metrics to the original model as",0
+"# TODO(priyag,omalleyt): Either we should move the training DS with",0
+# TODO(omalleyt): Make this work with `run_eagerly=True`.,1
+# TODO(b/152990697): Fix the class weights test here.,1
+# TODO(psv): Re-enable test once it is fixed.,1
+# TODO(b/161487382):,0
+# TODO(b/161487382):,0
+"# TODO(b/203201161) Figure out why mutation is needed here, and remove",0
+"# TODO(edloper): Consider adding .with_shape method to TensorSpec,",0
+# TODO(edloper): Consider moving this check to the KerasTensor,0
+"# dynamic"" at the level of `Model`. TODO(fchollet): investigate and",0
+# TODO(psv): Dedup code here with graph mode prepare_total_loss() fn.,1
+# TODO(sallymatson/psv): check if we should do same mismatch fix for weights,0
+# TODO(tanzheny) b/132690565: Provide mechanism for user to,0
+# TODO(scottzhu): maybe better handle mask and training flag.,1
+# TODO(fchollet): consider using py_func to enable this.,1
+# TODO(omalleyt): Fix the ordering issues that mean this has to,0
+# TODO(b/272050910): Use sample_weight for weighted metrics.,1
+# TODO(jmullenbach): implement and use a clone for,0
+# TODO(b/264265138) evaluate and improve this heuristic,0
+# TODO(yashkatariya): Cache model on the coordinator for faster,0
+# TODO(fchollet): We could build a dictionary based on layer names,0
+# TODO(b/150317897): Figure out long-term plan here.,1
+# TODO(wxinyi): merge this with _tpu_multi_host_concat once we have all_gather,0
+# TODO(scottzhu): Move to more stable API when dtensor based strategy is,0
+# TODO(b/142020079): Re-enable it once the bug is fixed.,1
+# TODO(allenl): a `make_variable` equivalent should be added as a,0
+"# TODO(fchollet): in the future, this should be handled at the",0
+"# TODO(fchollet): consider py_func as an alternative,",0
+# TODO(b/120997007): This should be done in Eager as,0
+# TODO(reedwm): Expose this property?,0
+"# TODO(reedwm): Deprecate, then remove the _dtype property.",0
+# TODO(b/180760306) Keeping the status quo of skipping _delattr__ and,0
+# TODO(scottzhu): Need to track Module object as well for weight,0
+# TODO(b/125122625): This won't pick up on any variables added to a,0
+# TODO(b/180760306) Skip the auto trackable from tf.Module to keep,0
+# TODO(b/110718070): Remove when fixed.,1
+# TODO(b/213628533): This must be called before super() to ensure,0
+"# TODO(priyag, sourabhbajaj): Ignoring these things from the",0
+# TODO(fchollet): add support for `steps_per_epoch=None` in TPU loops.,1
+# TODO(hongjunchoi): Investigate whether operations from,0
+# TODO(hongjunchoi): When numpy array is passed as an input to `predict()`,0
+# TODO(priyag): maybe need to unwrap the outputs first for,0
+# TODO(scottzhu): Enable this after the forward compat period expires for,0
+# TODO(scottzhu): Enable these tests after the forward compat period,0
+# TODO(scottzhu): Remove this once the forward compat period above,0
